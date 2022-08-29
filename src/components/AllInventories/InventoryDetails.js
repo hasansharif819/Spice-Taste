@@ -69,7 +69,7 @@ const InventoryDetails = () => {
                     <p className="text-2xl font-semibold text-red-300 py-2">Quantity: {product.quantity} kg</p>
                     <form onSubmit={UpdateQuantity}>
                         <input type="number" name="quantity" placeholder='Quantity' className='input input-bordered h-8 w-28' required />
-                        <button className='btn btn-sm bg-red-800 ml-3'> <input type="submit" value="STOCK" /></button>
+                        <button className='btn btn-sm bg-red-800 ml-3'> <input type="submit" value="RESTOCK" /></button>
                     </form>
                     <button onClick={handleDelivery} className="btn bg-red-800 mt-5">DELIVERY</button>
                     <Link to='/manageInventory'><button className='btn bg-red-800 my-5 ml-10'>MANAGE INVENTORY</button></Link>
