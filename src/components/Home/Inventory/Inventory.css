@@ -1,0 +1,23 @@
+#inventoryID{
+    background-image: url('https://i.ibb.co/wcjSQ6c/chilly1.webp');
+    background-size: cover;
+}
+
+#inventory :hover{
+    transition: all 3s ease;
+      transform: scale(1.2);
+      overflow: hidden;
+}
+/* 
+#inventory button{
+    display: none;
+}
+#inventory button:hover{
+    display: inline-flex;
+    background-color: aqua;
+} */
+
+#img1{
+    height: 350px;
+    overflow: hidden;
+}

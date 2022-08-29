@@ -1,0 +1,17 @@
+/* #ourClient{
+  background-image: url('https://i.ibb.co/f9WDhQc/redhot1.webp');
+  background-size: cover;
+  filter: blur(2px);
+} */
+
+#ourClientImage{
+  background-image: url('https://i.ibb.co/f9WDhQc/redhot1.webp');
+  background-size: cover;
+  /* filter: blur(1px); */
+}
+
+#avatarcss :hover{
+    transition: all 3s ease;
+      transform: scale(1.2);
+      overflow: hidden;
+}
