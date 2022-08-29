@@ -1,9 +1,9 @@
 #carouselcss img{
     width: 500px;
 }
-#carouselcss :hover{
+/* #carouselcss :hover{
     transition: all 5s ease;
     transform: rotate(180deg);
     overflow: hidden;
-}
+} */
 

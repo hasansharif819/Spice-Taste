@@ -15,8 +15,8 @@ const Header = () => {
         <li><Link to='/allinventories'>INVENTORY</Link></li>
 
         <li><Link to="/manageInventory">MANAGE INVENTORY</Link></li>
-        { user && <li><Link to="/addItem">ADD NEW ITEM</Link></li>}
-        { user && <li><Link to="/useritem">MY ITEM</Link></li>}
+        {/* { user && <li><Link to="/addItem">ADD NEW ITEM</Link></li>}
+        { user && <li><Link to="/useritem">MY ITEM</Link></li>} */}
         <li><Link to="/blog">BLOG</Link></li>
         <li><Link to="/contact">CONTACT US</Link></li>
 
@@ -36,8 +36,8 @@ const Header = () => {
                             {menu}
                         </ul>
                     </div>
+                    <img height={40} width={40} src="https://i.ibb.co/wcjSQ6c/chilly1.webp" alt="" />
                     <Link to='/' className='text-2xl'>SPICE TASTE</Link>
-                    {/* <div> <a className=' text-2xl'>SPICE TASTE</a></div> */}
                 </div>
                 <div className='navbar-center hidden lg:flex'>
                     <ul className="menu menu-horizontal p-0">
