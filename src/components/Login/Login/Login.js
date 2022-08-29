@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
-import { useSignInWithEmailAndPassword, useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import React, { useEffect, useRef } from 'react';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loading from '../../../Shared/Loading/Loading';
 import useToken from '../../../hooks/useToken';
+import { toast } from 'react-toastify';
 
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -16,9 +17,12 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     const [token] = useToken(user || gUser);
 
     let signInError;
+    const emailRef = useRef('');
+    const passwordRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
@@ -39,6 +43,17 @@ const Login = () => {
 
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password);
+    }
+
+    const resetPassword = async() => {
+        const email = emailRef.current.value;
+        if(email){
+            await sendPasswordResetEmail(email);
+            toast('Email sent, Please verify')
+        }
+        else{
+            toast('Enter valid email address');
+        }
     }
     return (
         <div className="hero min-h-screen bg-base-200" id='signLog'>
@@ -100,6 +115,7 @@ const Login = () => {
                         <input className='btn w-full max-w-xs text-white' type="submit" value="Login" />
                     </form>
                     <p><small> <Link className='text-white' to="/signup">Create New Account</Link></small></p>
+                    <p><small className='text-white' onClick={resetPassword}> Forgot Password</small></p>
                     <div className='flex justify-center gap-5'>
                     <button
                         onClick={() => signInWithGoogle()}

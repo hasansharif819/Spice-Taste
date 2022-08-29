@@ -7,19 +7,7 @@ import SingleItem from './SingleItem';
 
 const UserItem = () => {
     const [user] = useAuthState(auth);
-    // const [items, setItems] = useState([]);
-    // useEffect(() => {
-    //     if (user) {
-    //         const url = `http://localhost:5000/myitem?email=${user.email}`;
-    //         fetch(url)
-    //             .then(res => res.json())
-    //             .then(data => {
-    //                 console.log(data)
-    //                 setItems(data)
-    //             })
-    //     }
-    // }, [user])
-
+    
     const {data:items, isLoading, refetch} = useQuery('items', () => fetch(`http://localhost:5000/myitem?email=${user.email}`).then(res => res.json()))
     if(isLoading){
         return <Loading></Loading>

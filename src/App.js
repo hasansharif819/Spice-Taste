@@ -15,11 +15,11 @@ import AddItem from './components/MyPage/AddItem';
 import RequireAuth from './components/Login/RequireAuth/RequireAuth';
 import UserItem from './components/MyPage/UserItem';
 import Blog from './components/Blog/Blog';
+import PageNotFound from './components/PageNotFound/PageNotFound';
 
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
       <Header />
       <Routes>
         <Route path='/' element={<Home />}></Route>
@@ -48,6 +48,8 @@ function App() {
 
         <Route path='/login' element={<Login />}></Route>
         <Route path='/signup' element={<Signup />}></Route>
+
+        <Route path='*' element={<PageNotFound />}></Route>
       </Routes>
       <Footer />
       <ToastContainer />

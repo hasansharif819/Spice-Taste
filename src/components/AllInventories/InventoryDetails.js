@@ -9,19 +9,18 @@ const InventoryDetails = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
-    }, [inventoryId])
+    }, [inventoryId, product, product.quantity])
 
     //add quantity
     const UpdateQuantity = event => {
         event.preventDefault();
-
 
         const stock = parseInt(event.target.quantity.value);
         if (stock < 0) {
             alert('Enter positive number');
         }
         else {
-            const previousQuantity =parseInt(product?.quantity);
+            const previousQuantity = parseInt(product?.quantity);
             const quantity = {
                 quantity: previousQuantity + stock
             }
@@ -36,23 +35,19 @@ const InventoryDetails = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
-                    window.location.reload()
+                    if (data.modifiedCount > 0) {
+                        event.target.reset();
+                    }
                 })
-
         }
     }
-
-
     // //delivery
     const handleDelivery = () => {
-        console.log('delivery')
         const quantity = {
             quantity: product.quantity - 1
         }
 
         const url = `http://localhost:5000/spice/${product._id}`
-        console.log(quantity)
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -61,12 +56,6 @@ const InventoryDetails = () => {
             body: JSON.stringify(quantity)
         })
             .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.modifiedCount > 0) {
-                    window.location.reload(false);
-                }
-            }) 
     }
 
 
