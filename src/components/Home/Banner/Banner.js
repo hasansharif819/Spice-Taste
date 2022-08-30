@@ -1,20 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Banner.css';
 
 const Banner = () => {
     return (
         <div id='outside'>
-            <div id="large" className="carousel rounded-box">
-            <div className="hero min-h-screen ">
-  <div className="hero-content text-center">
-    <div className="max-w-md">
-      <h1 className="text-5xl font-bold pt-60"><span className='text-yellow-500'>SPICE</span> <span className='text-white'>TASTE</span></h1>
-      <p className="py-2 text-white font-bold text-4xl"><span className='text-green-400'>FRESH FR</span>OM OUR FARM SP<span className='text-green-500'>I</span>CE</p>
-      {/* <p className="py-2  font-semibold text-3xl text-yellow-300">Time to Taste</p> */}
+            <div className="hero min-h-screen" id='large'>
+  <div className="hero-overlay bg-opacity-60"></div>
+  <div className="hero-content text-center text-neutral-content">
+    <div className="max-w-md mt-40">
+      <h1 className="mb-5 text-5xl font-bold">SP<span className='text-yellow-500'>I</span>CE  TA<span className='text-red-400'>S</span>TE</h1>
+      <p className="mb-5 text-3xl">A well known <span className='text-yellow-400 font-bold'>Spice</span> Stock Market</p>
+      <Link to='/allinventories'><button className="btn bg-red-900">INVENTORY</button>
+</Link>
     </div>
   </div>
 </div>
-            </div>
+
+            {/* small / side part  */}
             <div id="small">
                 <div id='smallUp'>
                 <img src="https://i.ibb.co/fHdyj0X/s2.jpg" className="rounded-box" alt=''/>

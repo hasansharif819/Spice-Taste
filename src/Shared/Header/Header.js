@@ -72,20 +72,24 @@ const Header = () => {
                         <div className="dropdown dropdown-end">
                             <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
-                                    {/* <img src="https://placeimg.com/80/80/people" /> */}
                                     {user ? <img height={20} width={30} className='rounded-full' src={user?.photoURL} alt="" /> : <Link to='/login'>Sign</Link>}
 
                                 </div>
                             </label>
                             <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-red-800 rounded-box w-52">
                                 <li>
-                                    <Link to='/addItem'>Add Item</Link>
+                                    <button className='btn bg-red-900'>
+                                        <h2>{user?.displayName}</h2>
+                                    </button>
                                 </li>
                                 <li>
-                                    <Link to='/useritem'>My Item</Link>
+                                    <Link to='/addItem'><button className='btn bg-red-900 w-full'>ADD ITEM</button></Link>
                                 </li>
                                 <li>
-                                    <button className='btn btn-ghost' onClick={logout}>Logout</button>
+                                    <Link to='/useritem'><button className='btn btn-red-900 w-full'>MY ITEM</button></Link>
+                                </li>
+                                <li>
+                                    <button className='btn bg-red-900' onClick={logout}>Logout</button>
                                 </li>
 
                             </ul>

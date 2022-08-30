@@ -32,9 +32,9 @@ const Contact = () => {
             })
     }
     return (
-        <div class="hero min-h-screen" id='backgroundImage'>
-            <div class="hero-content flex-col lg:flex-row">
-                <img src="https://i.ibb.co/n7gng4w/hero.webp" class="max-w-sm rounded-lg shadow-2xl" alt='' />
+        <div className="hero min-h-screen" id='backgroundImage'>
+            <div className="hero-content flex-col lg:flex-row">
+                <img src="https://i.ibb.co/n7gng4w/hero.webp" className="max-w-sm rounded-lg shadow-2xl" alt='' />
                 <div>
                     <h2 className='text-center text-5xl font-bold text-red-400'>Get In Touch With Us</h2>
 

@@ -18,6 +18,11 @@
 } */
 
 #img1{
-    height: 350px;
+    height: 250px;
+    width: 100%;
     overflow: hidden;
 }
+
+/* #spiceBody{
+    height: 200px;
+} */

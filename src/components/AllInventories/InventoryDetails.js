@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const InventoryDetails = () => {
     const { inventoryId } = useParams();
@@ -36,6 +37,7 @@ const InventoryDetails = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.modifiedCount > 0) {
+                        toast('Successfully Restock')
                         event.target.reset();
                     }
                 })
@@ -72,7 +74,7 @@ const InventoryDetails = () => {
                         <button className='btn btn-sm bg-red-800 ml-3'> <input type="submit" value="RESTOCK" /></button>
                     </form>
                     <button onClick={handleDelivery} className="btn bg-red-800 mt-5">DELIVERY</button>
-                    <Link to='/manageInventory'><button className='btn bg-red-800 my-5 ml-10'>MANAGE INVENTORY</button></Link>
+                    <Link to='/manageInventory'><button className='btn bg-red-800 my-5 ml-10'>MANAGE ITEM</button></Link>
 
                 </div>
             </div>

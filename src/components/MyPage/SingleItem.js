@@ -47,7 +47,7 @@ const SingleItem = ({ item, refetch, index }) => {
           <span className="badge badge-ghost badge-sm">Quantity: {quantity}</span>
         </td>
         <th>
-          <button onClick={() => deleteItem(item._id)} className="btn bg-red-500 btn-xs">REMOVE</button>
+          <button onClick={() => deleteItem(item._id)} ><img className='rounded-full' height={50} width={50} src="https://i.ibb.co/thV5zXx/deleteicon1.jpg" alt="" /></button>
         </th>
       </tr>
     );

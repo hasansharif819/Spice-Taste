@@ -1,0 +1,58 @@
+.outer{
+    height: 300px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 2px solid red;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    grid-gap: 20px;
+    background-image: url('https://i.ibb.co/wcjSQ6c/chilly1.webp');
+}
+
+.inner1 img{
+    height: 290px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.inner2{
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.inner3{
+    height: 290px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 400px) {
+    .outer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .inner1 img{
+        width: 100%;
+    }
+    .inner2{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        
+    }
+}
+@media only screen and (min-width: 401px) and (max-width: 800px) {
+    .outer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .inner1 img{
+        width: 100%;
+    }
+    .inner2{
+        width: 100%;
+        justify-content: center
+    }
+}

@@ -1,10 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useInventory from '../../hooks/useInventory';
 import AllInventory from './AllInventory';
+import './AllInventories.css';
 
 const AllInventories = () => {
-    const [inventories] = useInventory([]);
+    const [inventories, setInventories] = useState([]);
+    const [pageCount, setPageCount] = useState(0);
+    const [page, setPage] = useState(0);
+    const [size, setSize] = useState(6);
+
+    useEffect( () => {
+        fetch(`http://localhost:5000/spice?page=${page}&size=${size}`)
+        .then(res => res.json())
+        .then(data => setInventories(data))
+    }, [page, size])
+
+    useEffect( () => {
+        fetch('http://localhost:5000/spiceCount')
+        .then(res => res.json())
+        .then(data => {
+            const count = data.count;
+            const pages = Math.ceil(count / 6);
+            setPageCount(pages);
+        })
+    }, [])
+
     return (
         <div className='my-5' id='inventoryID'>
             <div>
@@ -20,6 +41,21 @@ const AllInventories = () => {
                     inventory={inventory}
                 ></AllInventory>)
             }
+           </div>
+           <div className='pagination'>
+                {
+                    [...Array(pageCount).keys()]
+                    .map(number => <button 
+                    onClick={() => setPage(number)}
+                    className={page===number?'bg-yellow-900 btn btn-sm mr-5':'btn btn-sm mr-5 bg-red-500'}
+                    >{number +1}</button>)
+                }
+                <select onChange={e=> setSize(e.target.value)} className='btn btn-sm bg-red-500' >
+                    <option value="6" selected>6</option>
+                    <option value="12">12</option>
+                    <option value="18">18</option>
+                    <option value="24">24</option>
+                </select>
            </div>
         </div>
     );
