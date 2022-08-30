@@ -3,12 +3,17 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-base-200  bg-black text-white" id='footer'>
+        <footer className="footer p-10 text-white" id='footer'>
+          <div>
+            <h2 className='text-2xl font-bold text-red-500'>SPICE-TASTE</h2>
+            <p className=' font-semibold text-start'>We sell different types of Spices. Many of our spices are imported from abroad. We always try to main the best quality of every spice</p>
+          </div>
   <div>
     <span className="footer-title">Services</span> 
-    <a className="link link-hover">Photography</a> 
-    <a className="link link-hover">Design</a> 
+    <a className="link link-hover">Spice</a> 
+    <a className="link link-hover">Selling</a> 
     <a className="link link-hover">Marketing</a> 
+    <a className="link link-hover">Import</a> 
     <a className="link link-hover">Advertisement</a>
   </div> 
   <div>
@@ -28,7 +33,7 @@ const Footer = () => {
     <span className="footer-title">SPICE TASTE</span> 
     <div className="form-control w-80">
       <label className="label">
-        <span className="label-text">Enter your email address</span>
+        <span className="label-text text-red-50">Enter your email address</span>
       </label> 
       <div className="relative">
         <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" /> 

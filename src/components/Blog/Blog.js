@@ -3,7 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import './Blog.css';
 
-const Blog = ({blog, refetch}) => {
+const Blog = ({blog}) => {
     const {name, des, img, docs} = blog;
     const [user] = useAuthState(auth);
 
@@ -46,7 +46,7 @@ const Blog = ({blog, refetch}) => {
                 <div className='inner1'>
                     <img className='fluid' src={img} alt="" />
                 </div>
-                <div className='inner2 justify-center'>
+                <div className='inner2 justify-center text-start'>
                     <div className="card w-96 text-red-50 shadow-xl sm:justify-center">
                         <div className="card-body">
                             <h2 className="card-title text-red-400">{name}</h2>
