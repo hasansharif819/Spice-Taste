@@ -17,6 +17,7 @@ import UserItem from './components/MyPage/UserItem';
 import Blog from './components/Blog/Blog';
 import PageNotFound from './components/PageNotFound/PageNotFound';
 import Blogs from './components/Blog/Blogs';
+import AddBlog from './components/Blog/AddBlog';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
         }></Route>
 
         <Route path='/blogs' element={<Blogs />}></Route>
+        <Route path='/addBlog' element={<AddBlog />}></Route>
 
 
         <Route path='/login' element={<Login />}></Route>

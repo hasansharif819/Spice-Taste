@@ -86,6 +86,9 @@ const Header = () => {
                                     <Link to='/addItem'><button className='btn bg-red-900 w-full'>ADD ITEM</button></Link>
                                 </li>
                                 <li>
+                                    <Link to='/addBlog'><button className='btn bg-red-900 w-full'>ADD BLOG</button></Link>
+                                </li>
+                                <li>
                                     <Link to='/useritem'><button className='btn btn-red-900 w-full'>MY ITEM</button></Link>
                                 </li>
                                 <li>
