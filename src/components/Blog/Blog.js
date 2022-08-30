@@ -65,8 +65,15 @@ const Blog = ({blog, refetch}) => {
                         >
                         <div id='comment'>
                         <div id='comment_user'>
-                        <img height={30} width={30} src={com.img} alt="" />
-                        <h2>{com.name}</h2>
+
+                        {com?.img ? 
+                        <img height={30} width={30} src={com.img} alt="" /> : 
+                        <img height={30} width={30} className='rounded-full' src="https://i.ibb.co/48vFpdg/avatar.png" alt="" />
+                    }
+
+                        <h2>
+                            {com?.name ? com?.name : 'User name'}
+                            </h2>
                         </div>
                         <span className='text-start ml-10'>{com.comment}</span>
                         </div>
