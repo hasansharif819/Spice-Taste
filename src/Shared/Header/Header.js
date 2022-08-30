@@ -17,7 +17,7 @@ const Header = () => {
         <li><Link to="/manageInventory">MANAGE ITEM</Link></li>
         {/* { user && <li><Link to="/addItem">ADD NEW ITEM</Link></li>}
         { user && <li><Link to="/useritem">MY ITEM</Link></li>} */}
-        <li><Link to="/blog">BLOG</Link></li>
+        <li><Link to="/blogs">BLOG</Link></li>
         <li><Link to="/contact">CONTACT US</Link></li>
 
         {!user && <li><Link to="/login">LOGIN</Link></li>}

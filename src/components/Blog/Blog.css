@@ -23,7 +23,21 @@
 .inner3{
     height: 290px;
     border-radius: 10px;
-    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#comment_user{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+#comment img{
+   border-radius: 50%;
+}
+#comment{
+    display: flex;
+    flex-direction: column;
 }
 
 @media only screen and (max-width: 400px) {

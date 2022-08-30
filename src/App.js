@@ -16,6 +16,7 @@ import RequireAuth from './components/Login/RequireAuth/RequireAuth';
 import UserItem from './components/MyPage/UserItem';
 import Blog from './components/Blog/Blog';
 import PageNotFound from './components/PageNotFound/PageNotFound';
+import Blogs from './components/Blog/Blogs';
 
 function App() {
   return (
@@ -43,7 +44,7 @@ function App() {
         <RequireAuth><UserItem /></RequireAuth>
         }></Route>
 
-        <Route path='/blog' element={<Blog />}></Route>
+        <Route path='/blogs' element={<Blogs />}></Route>
 
 
         <Route path='/login' element={<Login />}></Route>

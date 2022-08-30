@@ -1,0 +1,30 @@
+[
+    {
+        "_id": 1,
+        "name": "CUMINS",
+        "des": "Cumin is a flowering plant in the family Apiaceae, native to the Irano-Turanian Region. Its seeds – each one contained within a fruit, which is dried – are used in the cuisines of many cultures in both whole and ground form.",
+        "img": "https://i.ibb.co/HqhkXsy/cumins1.webp",
+        "docs": "https://en.wikipedia.org/wiki/Cumin"
+    },
+    {
+        "_id": 2,
+        "name": "CARDAMOMS",
+        "des": "Cardamom, sometimes cardamon or cardamum, is a spice made from the seeds of several plants in the genera Elettaria and Amomum in the family Zingiberaceae. Elettaria pods are light green and smallerElettaria pods are light green and smaller, while Amomum pods",
+        "img": "https://i.ibb.co/84CS4b4/cardamons1.jpg",
+        "docs": "https://en.wikipedia.org/wiki/Cardamom"
+    },
+    {
+        "_id": 3,
+        "name": "NUT",
+        "des": "A nut is a fruit consisting of a hard or tough nutshell protecting a kernel which is usually edible. In general usage and in a culinary sense, a wide variety of dry seeds are called nuts, but in a botanical context 'nut' implies that the shell does not open to release the seed.",
+        "img": "https://i.ibb.co/86gq8bx/nuts.webp",
+        "docs": "https://en.wikipedia.org/wiki/Nut_(fruit)"
+    },
+    {
+        "_id": 4,
+        "name": "NUTMEG",
+        "des": "Nutmeg is the seed or ground spice of several species of the genus Myristica. Myristica fragrans is a dark-leaved evergreen tree cultivated for two spices derived from its fruit: nutmeg, from its seed, and mace, from the seed covering. It is also a commercial source of an essential oil and nutmeg butter.",
+        "img": "https://i.ibb.co/WxYFmK2/nutmeg.webp",
+        "docs": "https://en.wikipedia.org/wiki/Nutmeg"
+    }
+]
