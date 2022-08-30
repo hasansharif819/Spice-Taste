@@ -52,7 +52,7 @@ const Blog = ({blog}) => {
                             <h2 className="card-title text-red-400">{name}</h2>
                             <p>{des}</p>
                             <div className="card-actions justify-center">
-                                <a href={docs}><button className="btn btn-sm bg-red-900">MORE</button>
+                                <a href={docs} target='_blank'><button className="btn btn-sm bg-red-900">DETAILS</button>
                                 </a>
                             </div>
                         </div>

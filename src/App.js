@@ -14,10 +14,10 @@ import InventoryDetails from './components/AllInventories/InventoryDetails';
 import AddItem from './components/MyPage/AddItem';
 import RequireAuth from './components/Login/RequireAuth/RequireAuth';
 import UserItem from './components/MyPage/UserItem';
-import Blog from './components/Blog/Blog';
 import PageNotFound from './components/PageNotFound/PageNotFound';
 import Blogs from './components/Blog/Blogs';
 import AddBlog from './components/Blog/AddBlog';
+import UserMessage from './components/Contact/UserMessage';
 
 function App() {
   return (
@@ -35,7 +35,9 @@ function App() {
           <RequireAuth><ManageInventories /></RequireAuth>
         }></Route>
         
-        <Route path='/contact' element={<Contact />}></Route>
+        <Route path='/contact' element={
+          <RequireAuth><Contact /></RequireAuth>
+        }></Route>
 
         <Route path='/addItem' element={
         <RequireAuth><AddItem /></RequireAuth>
@@ -43,6 +45,9 @@ function App() {
 
         <Route path='/useritem' element={
         <RequireAuth><UserItem /></RequireAuth>
+        }></Route>
+        <Route path='/userMessage' element={
+        <RequireAuth><UserMessage /></RequireAuth>
         }></Route>
 
         <Route path='/blogs' element={<Blogs />}></Route>

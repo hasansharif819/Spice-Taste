@@ -10,7 +10,6 @@ const Blogs = () => {
     if(isLoading){
         return <Loading />
     }
-    console.log('blogs', blogs)
     return (
         <div>
             {

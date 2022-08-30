@@ -98,6 +98,9 @@ const Header = () => {
                                     <Link to='/useritem'><button className='btn btn-red-900 w-full'>MY ITEM</button></Link>
                                 </li>
                                 <li>
+                                    <Link to='/userMessage'><button className='btn btn-red-900 w-full'>ALL MESSAGE</button></Link>
+                                </li>
+                                <li>
                                     <button className='btn bg-red-900' onClick={logout}>Logout</button>
                                 </li>
 

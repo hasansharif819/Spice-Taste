@@ -22,7 +22,7 @@ const Inventories = () => {
             }
            </div>
            <Link to='/allInventories'><button className='btn bg-red-800 my-5'>SEE MORE</button></Link>
-           <Link to='/manageInventory'><button className='btn bg-red-800 my-5 ml-10'>MANAGE ITEM</button></Link>
+           {/* <Link to='/manageInventory'><button className='btn bg-red-800 my-5 ml-10'>MANAGE ITEM</button></Link> */}
         </div>
     );
 };
