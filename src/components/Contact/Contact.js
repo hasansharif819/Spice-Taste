@@ -16,7 +16,7 @@ const Contact = () => {
             contact: data.contact,
             message: data.message,
         }
-        fetch('http://localhost:5000/message', {
+        fetch('https://boiling-coast-23133.herokuapp.com/message', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

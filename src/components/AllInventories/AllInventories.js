@@ -11,13 +11,13 @@ const AllInventories = () => {
     const [size, setSize] = useState(6);
 
     useEffect( () => {
-        fetch(`http://localhost:5000/spice?page=${page}&size=${size}`)
+        fetch(`https://boiling-coast-23133.herokuapp.com/spice?page=${page}&size=${size}`)
         .then(res => res.json())
         .then(data => setInventories(data))
     }, [page, size])
 
     useEffect( () => {
-        fetch('http://localhost:5000/spiceCount')
+        fetch('https://boiling-coast-23133.herokuapp.com/spiceCount')
         .then(res => res.json())
         .then(data => {
             const count = data.count;

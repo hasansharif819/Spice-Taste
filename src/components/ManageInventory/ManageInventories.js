@@ -4,7 +4,7 @@ import ManageInventory from './ManageInventory';
 import Loading from '../../Shared/Loading/Loading';
 
 const ManageInventories = () => {
-    const {data: inventories, isLoading, refetch} = useQuery('inventories', () => fetch('http://localhost:5000/spice').then(res => res.json()))
+    const {data: inventories, isLoading, refetch} = useQuery('inventories', () => fetch('https://boiling-coast-23133.herokuapp.com/spice').then(res => res.json()))
 if(isLoading){
     return <Loading></Loading>
 }

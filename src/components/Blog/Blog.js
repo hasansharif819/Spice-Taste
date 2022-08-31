@@ -17,7 +17,7 @@ const Blog = ({blog}) => {
             comment: event.target.comment.value,
             blogId: blog._id
         }
-        fetch('http://localhost:5000/comment', {
+        fetch('https://boiling-coast-23133.herokuapp.com/comment', {
             method: "POST",
             headers: {
                 'content-type': "application/json"
@@ -35,7 +35,7 @@ const Blog = ({blog}) => {
     //load comment
     const [comments, setComments] = useState([]);
     useEffect( () => {
-        fetch(`http://localhost:5000/comment/${blog._id}`)
+        fetch(`https://boiling-coast-23133.herokuapp.com/comment/${blog._id}`)
     .then(res => res.json())
     .then(data => setComments(data))
     }, [user, blog, comments])

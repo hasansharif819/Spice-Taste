@@ -18,7 +18,7 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
-    const [token] = useToken(user || gUser);
+    const [token] = useToken(user || gUser || fUser);
 
     let signInError;
     const emailRef = useRef('');
@@ -28,10 +28,10 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
 
     useEffect( () =>{
-        if (user || gUser || fUser) {
+        if (user || gUser || fUser || token) {
             navigate(from, { replace: true });
         }
-    }, [user, gUser, fUser, from, navigate])
+    }, [user, gUser, fUser, from, navigate, token])
 
     if (loading || gLoading || fLoading) {
         return <Loading></Loading>

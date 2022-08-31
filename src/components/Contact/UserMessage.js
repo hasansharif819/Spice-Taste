@@ -4,7 +4,7 @@ import Loading from '../../Shared/Loading/Loading';
 import Messages from './Messages';
 
 const UserMessage = () => {
-    const {data: messages, isLoading} = useQuery('messages', () => fetch('http://localhost:5000/message').then(res => res.json()))
+    const {data: messages, isLoading} = useQuery('messages', () => fetch('https://boiling-coast-23133.herokuapp.com/message').then(res => res.json()))
     if(isLoading){
         return <Loading />
     }

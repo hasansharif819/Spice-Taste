@@ -5,7 +5,7 @@ const User = ({user, index, refetch}) => {
     const {email, role } = user;
 
     const makeAdmin = () => {
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`https://boiling-coast-23133.herokuapp.com/user/admin/${email}`, {
             method: "PUT",
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -29,7 +29,7 @@ const User = ({user, index, refetch}) => {
         console.log('deleted', _id);
         const proceed = window.confirm('Are you sure to delete');
         if(proceed){
-          const url = `http://localhost:5000/user/${user?._id}`;
+          const url = `https://boiling-coast-23133.herokuapp.com/user/${user?._id}`;
           fetch(url, {
             method: "DELETE"
           })

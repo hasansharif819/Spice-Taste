@@ -8,7 +8,7 @@ const ManageInventory = ({ inventory, refetch, index }) => {
         console.log('deleted', _id);
         const proceed = window.confirm('Are you sure to delete');
         if(proceed){
-          const url = `http://localhost:5000/spice/${inventory?._id}`;
+          const url = `https://boiling-coast-23133.herokuapp.com/spice/${inventory?._id}`;
           fetch(url, {
             method: "DELETE"
           })
