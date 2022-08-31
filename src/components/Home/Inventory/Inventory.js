@@ -31,7 +31,7 @@ const Inventory = ( {inventory} ) => {
     <h2 className="card-title text-red-500">{price} tk</h2>
     <h2 className="card-title text-green-500">Stock: {quantity} kg</h2>
     <div className="card-actions">
-      <Link to={`/allinventories/${_id}`}><button onClick={() => navigateToDetail(_id)} className="btn bg-red-900 btn-sm">UPDATE</button></Link>
+      <Link to={`/allinventories/${_id}`}><button onClick={() => navigateToDetail(_id)} className="btn bg-red-900 btn-sm" id='buttonID'>UPDATE</button></Link>
     </div>
   </div>
 </div>

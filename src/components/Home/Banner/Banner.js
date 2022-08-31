@@ -9,9 +9,9 @@ const Banner = () => {
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md mt-40">
-      <h1 className="mb-5 text-5xl font-bold">SP<span className='text-yellow-500'>I</span>CE  TA<span className='text-red-400'>S</span>TE</h1>
-      <p className="mb-5 text-3xl">A well known <span className='text-yellow-400 font-bold'>Spice</span> Stock Market</p>
-      <Link to='/allinventories'><button className="btn bg-red-900">SPICES</button>
+      <h1 className="mb-5 text-5xl font-bold">SPICE  TASTE</h1>
+      <p className="mb-5 text-3xl">A well known Spice Stock Market</p>
+      <Link to='/allinventories'><button className="btn bg-red-900" id='buttonID'>SPICES</button>
 </Link>
     </div>
   </div>

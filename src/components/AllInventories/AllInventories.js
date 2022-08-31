@@ -47,10 +47,10 @@ const AllInventories = () => {
                     [...Array(pageCount).keys()]
                     .map(number => <button 
                     onClick={() => setPage(number)}
-                    className={page===number?'bg-yellow-900 btn btn-sm mr-5':'btn btn-sm mr-5 bg-red-500'}
+                    className={page===number?'bg-red-500 btn btn-sm mr-5 mb-5':'btn btn-sm mr-5 bg-red-900 mb-5'}
                     >{number +1}</button>)
                 }
-                <select onChange={e=> setSize(e.target.value)} className='btn btn-sm bg-red-500' >
+                <select onChange={e=> setSize(e.target.value)} className='btn btn-sm bg-red-900' >
                     <option value="6" selected>6</option>
                     <option value="12">12</option>
                     <option value="18">18</option>

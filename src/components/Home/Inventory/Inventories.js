@@ -21,8 +21,7 @@ const Inventories = () => {
                 ></Inventory>)
             }
            </div>
-           <Link to='/allInventories'><button className='btn bg-red-800 my-5'>SEE MORE</button></Link>
-           {/* <Link to='/manageInventory'><button className='btn bg-red-800 my-5 ml-10'>MANAGE ITEM</button></Link> */}
+           <Link to='/allInventories'><button className='btn bg-red-800 my-5' id='buttonID'>SEE MORE</button></Link>
         </div>
     );
 };

@@ -15,3 +15,14 @@
       transform: scale(1.2);
       overflow: hidden;
 }
+
+#CarouselBackground{
+  border-radius: 20px;
+    overflow: hidden;
+    background-image: url('https://i.ibb.co/wcjSQ6c/chilly1.webp');
+    background-size: cover;
+}
+
+.backGround{
+  background-image: url('https://i.ibb.co/wcjSQ6c/chilly1.webp');
+}
