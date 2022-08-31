@@ -3,6 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import './Contact.css';
 
 const Contact = () => {
     const { register, formState: { errors }, reset, handleSubmit } = useForm();
@@ -33,7 +34,7 @@ const Contact = () => {
     }
     return (
         <div className="hero min-h-screen" id='backgroundImage'>
-            <div className="hero-content flex-col lg:flex-row">
+            <div className="hero-content flex-col lg:flex-row" id='imageID'>
                 <img src="https://i.ibb.co/n7gng4w/hero.webp" className="max-w-sm rounded-lg shadow-2xl" alt='' />
                 <div>
                     <h2 className='text-center text-5xl font-bold text-red-400'>Get In Touch With Us</h2>

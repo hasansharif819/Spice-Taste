@@ -23,6 +23,18 @@
     overflow: hidden;
 }
 
-/* #spiceBody{
-    height: 200px;
-} */
+@media only screen and (max-width: 400px) {
+    #inventory{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 401) and (max-width: 800px) {
+    #inventory{
+        width: 100%;
+        margin-left: 0;
+    }
+    #img1{
+        width: 90%;
+        overflow: hidden;
+    }
+}
