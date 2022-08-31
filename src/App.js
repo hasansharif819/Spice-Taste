@@ -18,6 +18,8 @@ import PageNotFound from './components/PageNotFound/PageNotFound';
 import Blogs from './components/Blog/Blogs';
 import AddBlog from './components/Blog/AddBlog';
 import UserMessage from './components/Contact/UserMessage';
+import Users from './components/Users/Users';
+import RequireAdmin from './components/Login/RequireAdmin';
 
 function App() {
   return (
@@ -36,18 +38,21 @@ function App() {
         }></Route>
         
         <Route path='/contact' element={
-          <RequireAuth><Contact /></RequireAuth>
+          <Contact />
         }></Route>
 
         <Route path='/addItem' element={
-        <RequireAuth><AddItem /></RequireAuth>
+        <AddItem />
         }></Route>
 
         <Route path='/useritem' element={
-        <RequireAuth><UserItem /></RequireAuth>
+        <UserItem />
         }></Route>
         <Route path='/userMessage' element={
-        <RequireAuth><UserMessage /></RequireAuth>
+        <RequireAdmin><UserMessage /></RequireAdmin>
+        }></Route>
+        <Route path='/user' element={
+        <RequireAdmin><Users /></RequireAdmin>
         }></Route>
 
         <Route path='/blogs' element={<Blogs />}></Route>
