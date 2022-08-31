@@ -1,2 +1,2 @@
-# Spice-Taste
-# Link
+# Spice Taste
+# https://spice-taste.web.app
