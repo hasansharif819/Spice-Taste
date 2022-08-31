@@ -11,7 +11,7 @@ const Banner = () => {
     <div className="max-w-md mt-40">
       <h1 className="mb-5 text-5xl font-bold">SP<span className='text-yellow-500'>I</span>CE  TA<span className='text-red-400'>S</span>TE</h1>
       <p className="mb-5 text-3xl">A well known <span className='text-yellow-400 font-bold'>Spice</span> Stock Market</p>
-      <Link to='/allinventories'><button className="btn bg-red-900">INVENTORY</button>
+      <Link to='/allinventories'><button className="btn bg-red-900">SPICES</button>
 </Link>
     </div>
   </div>
