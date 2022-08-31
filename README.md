@@ -1,6 +1,9 @@
 # Spice Taste
 # https://spice-taste.web.app/
 
+## admin email: sharif.hasan.shuvro819@gmail.com
+## admin password: 123456
+
 * Firebase validation and verification used for authentication
 * Email-password, Google and Facebook login system
 * Using firebase hooks, react hooks form, axios, react query.
