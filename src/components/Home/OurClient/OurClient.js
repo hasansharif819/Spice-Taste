@@ -25,10 +25,10 @@ const OurClient = () => {
                         </div>
                     </figure>
                     <div className="card-body">
-                        <h2 className="card-title font-bold text-center text-white">
+                        <h2 className="card-title font-bold text-center text-white ml-5">
                         Xomelot tekpo
                         </h2>
-                        <p className='text-start text-white'>Web developing trends are always on the move. Creative folks from all around the world keep coming up with mind-blowing website layouts, bringing to life their best and most original ideas.</p>
+                        <p className='text-start text-white ml-5'>Web developing trends are always on the move. Creative folks from all around the world keep coming up with mind-blowing website layouts, bringing to life their best and most original ideas.</p>
                         <h3 className='text-white font-bold'>Amazing</h3>
                     </div>
                 </div>
@@ -42,10 +42,10 @@ const OurClient = () => {
                         </div>
                     </figure>
                     <div className="card-body">
-                        <h2 className="card-title text-white font-bold text-center">
+                        <h2 className="card-title text-white font-bold text-center ml-5">
                             Lorry Petro
                         </h2>
-                        <p className='text-start text-white'>Best website trends are always on the move. Creative folks from all around the world keep coming up with mind-blowing website layouts, bringing to life their best and most original ideas.</p>
+                        <p className='text-start text-white ml-5'>Best website trends are always on the move. Creative folks from all around the world keep coming up with mind-blowing website layouts, bringing to life their best and most original ideas.</p>
                         <h3 className='text-white font-bold'>I like it</h3>
                     </div>
                 </div>
@@ -58,10 +58,10 @@ const OurClient = () => {
                         </div>
                     </figure>
                     <div className="card-body">
-                        <h2 className="card-title text-white font-bold text-center">
+                        <h2 className="card-title text-white font-bold text-center ml-5">
                             Zenio pitter
                         </h2>
-                        <p className='text-start text-white'>Spice are awesome trends are always on the move. Creative folks from all around the world keep coming up with mind-blowing website layouts, bringing to life their best and most original ideas.</p>
+                        <p className='text-start text-white ml-5'>Spice are awesome trends are always on the move. Creative folks from all around the world keep coming up with mind-blowing website layouts, bringing to life their best and most original ideas.</p>
                         <h3 className='text-white font-bold'>Awesome</h3>
                     </div>
                 </div>
@@ -74,10 +74,10 @@ const OurClient = () => {
                         </div>
                     </figure>
                     <div className="card-body">
-                        <h2 className="card-title text-white font-bold text-center">
+                        <h2 className="card-title text-white font-bold text-center ml-5">
                             Lopez param
                         </h2>
-                        <p className='text-white text-start'>Nutt are always on the move. Creative folks from all around the world keep coming up with mind-blowing website layouts, bringing to life their best and most original ideas.</p>
+                        <p className='text-white text-start ml-5'>Nutt are always on the move. Creative folks from all around the world keep coming up with mind-blowing website layouts, bringing to life their best and most original ideas.</p>
                         <h3 className='text-white font-bold'>Taste</h3>
                     </div>
                 </div>
@@ -90,10 +90,10 @@ const OurClient = () => {
                         </div>
                     </figure>
                     <div className="card-body">
-                        <h2 className="card-title text-white font-bold text-center">
+                        <h2 className="card-title text-white font-bold text-center ml-5">
                         Sharif Hasan
                         </h2>
-                        <p className='text-white text-start'>Fantasting trends are always on the move. Creative folks from all around the world keep coming up with mind-blowing website layouts, bringing to life their best and most original ideas.</p>
+                        <p className='text-white text-start ml-5'>Fantasting trends are always on the move. Creative folks from all around the world keep coming up with mind-blowing website layouts, bringing to life their best and most original ideas.</p>
                         <h3 className='text-white font-bold'>Super</h3>
                     </div>
                 </div>
