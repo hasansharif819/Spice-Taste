@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Messages = ({mess, index}) => {
-    const {name, email, img, contact, message} = mess;
+    const {name, email, contact, message} = mess;
     return (
         <tr>
         <th>

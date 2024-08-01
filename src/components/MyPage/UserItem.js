@@ -7,7 +7,7 @@ import SingleItem from './SingleItem';
 const UserItem = () => {
     const [user] = useAuthState(auth);
     
-    const {data:items, isLoading, refetch} = useQuery('items', () => fetch(`https://boiling-coast-23133.herokuapp.com/myitem?email=${user.email}`).then(res => res.json()))
+    const {data:items, isLoading, refetch} = useQuery('items', () => fetch(`https://spice-taste-server.vercel.app/myitem?email=${user.email}`).then(res => res.json()))
     if(isLoading){
         return <Loading></Loading>
     }

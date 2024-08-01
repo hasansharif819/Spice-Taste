@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import useInventory from '../../hooks/useInventory';
+// import { Link } from 'react-router-dom';
+// import useInventory from '../../hooks/useInventory';
 import AllInventory from './AllInventory';
 import './AllInventories.css';
 
@@ -11,13 +11,13 @@ const AllInventories = () => {
     const [size, setSize] = useState(6);
 
     useEffect( () => {
-        fetch(`https://boiling-coast-23133.herokuapp.com/spice?page=${page}&size=${size}`)
+        fetch(`https://spice-taste-server.vercel.app/spice?page=${page}&size=${size}`)
         .then(res => res.json())
         .then(data => setInventories(data))
     }, [page, size])
 
     useEffect( () => {
-        fetch('https://boiling-coast-23133.herokuapp.com/spiceCount')
+        fetch('https://spice-taste-server.vercel.app/spiceCount')
         .then(res => res.json())
         .then(data => {
             const count = data.count;
@@ -51,7 +51,7 @@ const AllInventories = () => {
                     >{number +1}</button>)
                 }
                 <select onChange={e=> setSize(e.target.value)} className='btn btn-sm bg-red-900' >
-                    <option value="6" selected>6</option>
+                    <option value="6" defaultValue>6</option>
                     <option value="12">12</option>
                     <option value="18">18</option>
                     <option value="24">24</option>

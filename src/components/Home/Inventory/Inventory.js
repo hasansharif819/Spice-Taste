@@ -19,15 +19,15 @@ const Inventory = ( {inventory} ) => {
     </figure>
     <div className="card-body items-center text-center" id='spiceBody'>
     <h2 className="card-title text-red-300 font-bold text-2xl">{name}</h2>
-    <p>
-    <div className="rating rating-md">
-  <input type="radio" onChange={handleClick} name="rating-6" className="mask mask-star bg-orange-400" checked={true}/>
-  <input type="radio" name="rating-6" className="mask mask-star bg-orange-400"  />
-  <input type="radio" name="rating-6" className="mask mask-star bg-orange-400" />
-  <input type="radio" name="rating-6" className="mask mask-star bg-orange-400" />
-  <input type="radio" name="rating-6" className="mask mask-star bg-orange-400" />
-</div>
-    </p>
+    <div>
+      <div className="rating rating-md">
+        <input type="radio" onChange={handleClick} name="rating-6" className="mask mask-star bg-orange-400" checked={true}/>
+        <input type="radio" name="rating-6" className="mask mask-star bg-orange-400"  />
+        <input type="radio" name="rating-6" className="mask mask-star bg-orange-400" />
+        <input type="radio" name="rating-6" className="mask mask-star bg-orange-400" />
+        <input type="radio" name="rating-6" className="mask mask-star bg-orange-400" />
+      </div>
+    </div>
     <h2 className="card-title text-red-500">{price} tk</h2>
     <h2 className="card-title text-green-500">Stock: {quantity} kg</h2>
     <div className="card-actions">

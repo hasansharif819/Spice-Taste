@@ -31,7 +31,7 @@ const AddItem = () => {
                     quantity: data.quantity,
                     img: image
                 }
-                fetch('https://boiling-coast-23133.herokuapp.com/spice', {
+                fetch('https://spice-taste-server.vercel.app/spice', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

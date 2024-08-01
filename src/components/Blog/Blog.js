@@ -17,7 +17,7 @@ const Blog = ({blog}) => {
             comment: event.target.comment.value,
             blogId: blog._id
         }
-        fetch('https://boiling-coast-23133.herokuapp.com/comment', {
+        fetch('https://spice-taste-server.vercel.app/comment', {
             method: "POST",
             headers: {
                 'content-type': "application/json"
@@ -35,7 +35,7 @@ const Blog = ({blog}) => {
     //load comment
     const [comments, setComments] = useState([]);
     useEffect( () => {
-        fetch(`https://boiling-coast-23133.herokuapp.com/comment/${blog._id}`)
+        fetch(`https://spice-taste-server.vercel.app/comment/${blog._id}`)
     .then(res => res.json())
     .then(data => setComments(data))
     }, [user, blog, comments])
@@ -52,7 +52,7 @@ const Blog = ({blog}) => {
                             <h2 className="card-title text-red-400">{name}</h2>
                             <p>{des}</p>
                             <div className="card-actions justify-center">
-                                <a href={docs} target='_blank'><button className="btn btn-sm bg-red-900">DETAILS</button>
+                                <a href={docs} target='_blank' rel="noreferrer"><button className="btn btn-sm bg-red-900">DETAILS</button>
                                 </a>
                             </div>
                         </div>
@@ -60,7 +60,7 @@ const Blog = ({blog}) => {
                 </div>
                 <div className='inner3 text-center align-center text-red-200 border-red-200'>
                     {
-                        comments.map(com => <div
+                        comments?.map(com => <div
                             key={com._id}
                         >
                         <div id='comment'>

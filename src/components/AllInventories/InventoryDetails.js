@@ -6,7 +6,7 @@ const InventoryDetails = () => {
     const { inventoryId } = useParams();
     const [product, setProduct] = useState([])
     useEffect(() => {
-        const url = `https://boiling-coast-23133.herokuapp.com/spice/${inventoryId}`;
+        const url = `https://spice-taste-server.vercel.app/spice/${inventoryId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
@@ -26,7 +26,7 @@ const InventoryDetails = () => {
                 quantity: previousQuantity + stock
             }
 
-            const url = `https://boiling-coast-23133.herokuapp.com/spice/${product._id}`
+            const url = `https://spice-taste-server.vercel.app/spice/${product._id}`
             fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -49,7 +49,7 @@ const InventoryDetails = () => {
             quantity: product.quantity - 1
         }
 
-        const url = `https://boiling-coast-23133.herokuapp.com/spice/${product._id}`
+        const url = `https://spice-taste-server.vercel.app/spice/${product._id}`
         fetch(url, {
             method: 'PUT',
             headers: {

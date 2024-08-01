@@ -73,7 +73,7 @@ const Header = () => {
                             <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
                                     {user ?
-                                     user.photoURL ? <img height={30} width={30} className='rounded-full' src={user?.photoURL} alt="" /> : <div class="avatar online placeholder">
+                                     user.photoURL ? <img height={30} width={30} className='rounded-full' src={user?.photoURL} alt="" /> : <div className="avatar online placeholder">
                                        <img height={30} width={30} className='rounded-full' src="https://i.ibb.co/48vFpdg/avatar.png" alt="" />
                                      </div>
                                     : <Link to='/login'>Sign</Link>}

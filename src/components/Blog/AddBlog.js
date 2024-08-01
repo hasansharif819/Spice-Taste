@@ -30,7 +30,7 @@ const AddBlog = () => {
                     docs: data.docs,
                     img: image
                 }
-                fetch('https://boiling-coast-23133.herokuapp.com/blogs', {
+                fetch('https://spice-taste-server.vercel.app/blogs', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
